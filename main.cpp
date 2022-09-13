@@ -2,7 +2,7 @@
 // Created by xkolari1 on 13.09.2022.
 //
 
-//můj první soubor
+// můj první soubor
 
 #include "main.h"
 #include <iostream>
