@@ -1,3 +1,0 @@
-C:/Users/xkolari1/zoozs2022_xkolari1/c3/cmake-build-debug/CMakeFiles/c3.dir
-C:/Users/xkolari1/zoozs2022_xkolari1/c3/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/xkolari1/zoozs2022_xkolari1/c3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
