@@ -8,6 +8,7 @@
 #include "iostream"
 #include "Logic/CommandProcessor.h"
 #include <windows.h>
+#include <sstream>
 
 using namespace std;
 
@@ -20,17 +21,19 @@ void GameEngine::run() {
     handleAction(CommandProcessor::INIT);
 
     //Smycka, ktera
-    while(run){
+    while (run) {
+        //Resetuje debug messages
+        GameEngine::resetDebug();
         //Zaeviduje input
         input = getch();
         //Posle ho na vyhodnoceni
         command = InputHandler::getCommandForInput(input);
         //Pokud je to neco, co nas zajima
-        if(command != CommandProcessor::IGNORED){
+        if (command != CommandProcessor::IGNORED) {
             //a pokud se zrovna nepoukousime vypnout program
-            if(command == CommandProcessor::EXIT){
+            if (command == CommandProcessor::EXIT) {
                 run = false;
-            }else{
+            } else {
                 //posle do dalsi metody
                 handleAction(command);
             }
@@ -48,5 +51,20 @@ void GameEngine::handleAction(int command) {
 
     //vykreslim znovu kompletne cely game state
     m_renderer->printGameState(m_game_state);
+}
+
+void GameEngine::resetDebug() {
+    GameEngine::DEBUG_COUNT = 0;
+}
+
+void GameEngine::debugMessage(std::string message) {
+    //TODO deleting debugu by chtel poresit pres renderovani prazdneho obdelniku, muzou tam takhle zustavat radky
+    if (GameEngine::DEBUG) {
+        std::string eraser = "";
+        for (int i = 0; i < 100; ++i) eraser.append(" ");
+        InterfaceRenderer::printToXY(GameEngine::DEBUG_ROWS_FROM_TOP + GameEngine::DEBUG_COUNT, 0, eraser);
+        InterfaceRenderer::printToXY(GameEngine::DEBUG_ROWS_FROM_TOP + GameEngine::DEBUG_COUNT, 0, message);
+        GameEngine::DEBUG_COUNT++;
+    }
 }
 

@@ -10,35 +10,33 @@
 #define KEY_SPACE 32
 
 #include "InputHandler.h"
-#include "InterfaceRenderer.h"
-#include "..\Logic\CommandProcessor.h"
 
 
 int InputHandler::getCommandForInput(int ascii) {
     switch (ascii) {
         case KEY_UP:
-            InterfaceRenderer::debugMessage("up");
+            GameEngine::debugMessage("up");
             return CommandProcessor::UP;
             break;
         case KEY_DOWN:
-            InterfaceRenderer::debugMessage("down");
+            GameEngine::debugMessage("down");
             return CommandProcessor::DOWN;
             break;
         case KEY_LEFT:
-            InterfaceRenderer::debugMessage("left");
+            GameEngine::debugMessage("left");
             return CommandProcessor::LEFT;
             break;
         case KEY_RIGHT:
-            InterfaceRenderer::debugMessage("right");
+            GameEngine::debugMessage("right");
             return CommandProcessor::RIGHT;
             break;
         case KEY_SPACE:
-            InterfaceRenderer::debugMessage("space");
+            GameEngine::debugMessage("space");
             return CommandProcessor::SPACE;
             break;
         case KEY_E:
             //Vypne hru
-            InterfaceRenderer::debugMessage("e");
+            GameEngine::debugMessage("e");
             return CommandProcessor::EXIT;
             break;
         default:

@@ -19,7 +19,6 @@ public:
     const int UI_GAME = 1;
     InterfaceRenderer();
     static void printToXY(int x, int y, std::string s);
-    static void debugMessage(std::string message);
     void printGameState(GameState* gameState);
 };
 

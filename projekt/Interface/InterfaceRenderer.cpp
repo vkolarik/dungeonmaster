@@ -10,11 +10,6 @@
 
 using namespace std;
 
-void InterfaceRenderer::debugMessage(std::string message) {
-    if (GameEngine::DEBUG){
-        std::cout << message << std::endl;
-    }
-}
 void InterfaceRenderer::printToXY(int x, int y, string s){
     COORD coord;
     coord.X = y;
