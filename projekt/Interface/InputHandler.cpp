@@ -12,7 +12,6 @@
 #include "InputHandler.h"
 #include "InterfaceRenderer.h"
 #include "..\Logic\CommandProcessor.h"
-#include <conio.h>
 
 
 int InputHandler::getCommandForInput(int ascii) {
@@ -40,10 +39,10 @@ int InputHandler::getCommandForInput(int ascii) {
         case KEY_E:
             //Vypne hru
             InterfaceRenderer::debugMessage("e");
-            ::exit(0);
+            return CommandProcessor::EXIT;
             break;
         default:
-            return CommandProcessor::IGNORE;
+            return CommandProcessor::IGNORED;
             break;
     }
 

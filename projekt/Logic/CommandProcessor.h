@@ -6,15 +6,19 @@
 #define PROJEKT_COMMANDPROCESSOR_H
 
 
+#include "GameState.h"
+
 class CommandProcessor {
 public:
-    static const int IGNORE = 0;
+    static const int IGNORED = 0;
     static const int UP = 1;
     static const int DOWN = 2;
     static const int LEFT = 3;
     static const int RIGHT = 4;
     static const int SPACE = 5;
-    //void sendCommand(int command);
+    static const int EXIT = -1;
+    static const int INIT = -2;
+    GameState* processCommand(int command, GameState* gameState);
 
 };
 

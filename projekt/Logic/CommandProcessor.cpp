@@ -3,3 +3,7 @@
 //
 
 #include "CommandProcessor.h"
+
+GameState *CommandProcessor::processCommand(int command, GameState *gameState) {
+    return gameState;
+}

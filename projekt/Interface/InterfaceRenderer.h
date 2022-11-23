@@ -7,11 +7,20 @@
 
 
 #include <iostream>
+#include "../Logic/GameState.h"
+#include "vector"
+#include "RenderableBlock.h"
 
 class InterfaceRenderer {
-
+private:
+    std::vector<RenderableBlock*> m_renderable_blocks;
 public:
+    const int UI_HEADER = 0;
+    const int UI_GAME = 1;
+    InterfaceRenderer();
+    static void printToXY(int x, int y, std::string s);
     static void debugMessage(std::string message);
+    void printGameState(GameState* gameState);
 };
 
 

@@ -3,3 +3,7 @@
 //
 
 #include "GameState.h"
+
+bool GameState::needsRerender(int blockId) {
+    return m_needs_rerender[blockId];
+}

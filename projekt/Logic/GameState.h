@@ -7,6 +7,11 @@
 
 
 class GameState {
+private:
+    bool m_needs_rerender[10] = {true, false, false, false, false, false, false, false, false, false};
+public:
+    bool needsRerender(int blockId);
+
 
 };
 
