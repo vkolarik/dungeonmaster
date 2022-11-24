@@ -20,7 +20,7 @@ private:
 public:
     static int DEBUG_COUNT;
     static const bool DEBUG = true;
-    static const int DEBUG_ROWS_FROM_TOP = 20;
+    static const int DEBUG_ROWS_FROM_TOP = 28;
     static void debugMessage(std::string message);
     static void resetDebug();
     void run();

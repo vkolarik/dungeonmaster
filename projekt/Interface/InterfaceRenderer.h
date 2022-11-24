@@ -17,6 +17,10 @@ private:
 public:
     const int UI_HEADER = 0;
     const int UI_GAME = 1;
+    const int UI_INVENTORY = 2;
+    const int UI_STATS = 3;
+    const int UI_HINTS = 4;
+    const int UI_CONTROLS = 5;
     InterfaceRenderer();
     static void printToXY(int x, int y, std::string s);
     void printGameState(GameState* gameState);

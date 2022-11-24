@@ -5,5 +5,7 @@
 #include "GameState.h"
 
 bool GameState::needsRerender(int blockId) {
-    return m_needs_rerender[blockId];
+    //TODO vratit tohle zpet
+    //return m_needs_rerender[blockId];
+    return true;
 }
