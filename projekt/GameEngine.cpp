@@ -62,8 +62,8 @@ void GameEngine::debugMessage(std::string message) {
     if (GameEngine::DEBUG) {
         std::string eraser = "";
         for (int i = 0; i < 100; ++i) eraser.append(" ");
-        InterfaceRenderer::printToXY(GameEngine::DEBUG_ROWS_FROM_TOP + GameEngine::DEBUG_COUNT, 0, eraser);
-        InterfaceRenderer::printToXY(GameEngine::DEBUG_ROWS_FROM_TOP + GameEngine::DEBUG_COUNT, 0, message);
+        InterfaceRenderer::printToXY(0, GameEngine::DEBUG_ROWS_FROM_TOP + GameEngine::DEBUG_COUNT, eraser);
+        InterfaceRenderer::printToXY(0, GameEngine::DEBUG_ROWS_FROM_TOP + GameEngine::DEBUG_COUNT, message);
         GameEngine::DEBUG_COUNT++;
     }
 }

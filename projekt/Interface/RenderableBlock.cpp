@@ -31,7 +31,7 @@ void RenderableBlock::fillWithChar(std::string s) {
         line = line.append(s);
     }
     for (int i = 0; i < m_height; ++i) {
-        RenderableBlock::print(i, 0, line);
+        RenderableBlock::print(0, i, line);
     }
 }
 
