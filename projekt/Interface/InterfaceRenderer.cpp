@@ -22,6 +22,14 @@ void InterfaceRenderer::printToXY(int x, int y, string s){
     cout << s;
 }
 
+void InterfaceRenderer::printCharToXY(int x, int y, char s) {
+    COORD coord;
+    coord.X = x;
+    coord.Y = y;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+    cout << s;
+}
+
 void InterfaceRenderer::printGameState(GameState *gameState) {
     for(RenderableBlock* block : m_renderable_blocks){
         block->checkAndRender(gameState);
@@ -48,3 +56,5 @@ InterfaceRenderer::InterfaceRenderer() {
     Controls* controls = new Controls(10, 27, 99, 1, InterfaceRenderer::UI_CONTROLS);
     m_renderable_blocks.push_back(controls);
 }
+
+

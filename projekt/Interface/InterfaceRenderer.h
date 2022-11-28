@@ -23,6 +23,7 @@ public:
     const int UI_CONTROLS = 5;
     InterfaceRenderer();
     static void printToXY(int x, int y, std::string s);
+    static void printCharToXY(int x, int y, char s);
     void printGameState(GameState* gameState);
 };
 

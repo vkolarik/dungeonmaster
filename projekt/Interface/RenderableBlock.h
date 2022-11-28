@@ -18,6 +18,7 @@ public:
     void clear();
     void fill();
     void print(int x, int y, std::string s);
+    void printChar(int x, int y, char c);
     void checkAndRender(GameState* gameState);
     virtual void render(GameState* gameState) = 0;
 

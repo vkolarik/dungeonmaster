@@ -21,6 +21,7 @@ public:
     static int DEBUG_COUNT;
     static const bool DEBUG = true;
     static const int DEBUG_ROWS_FROM_TOP = 28;
+    static const int GAME_SIZE = 20;
     static void debugMessage(std::string message);
     static void resetDebug();
     void run();

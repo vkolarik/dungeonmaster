@@ -17,6 +17,10 @@ void RenderableBlock::print(int x, int y, std::string s) {
     InterfaceRenderer::printToXY(x+m_start_x, y+m_start_y, s);
 }
 
+void RenderableBlock::printChar(int x, int y, char c) {
+    InterfaceRenderer::printCharToXY(x+m_start_x, y+m_start_y, c);
+}
+
 void RenderableBlock::clear() {
     fillWithChar(" ");
 }
