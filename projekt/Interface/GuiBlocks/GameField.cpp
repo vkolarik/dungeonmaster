@@ -17,4 +17,7 @@ void GameField::render(GameState *gameState) {
             printChar(j*2, i, collection->getTileAt(j, i)->render());
         }
     }
+
+    Player* player = gameState->getPlayer();
+    printChar(player->getLocationX()*2, player->getLocationY(), player->render());
 }

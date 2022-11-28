@@ -4,17 +4,35 @@
 
 #include "GameState.h"
 #include "../Resources/Tiles/Wall.h"
+#include "../Resources/GameTileCollectionFactory.h"
 
 bool GameState::needsRerender(int blockId) {
-    //TODO vratit tohle zpet
-    //return m_needs_rerender[blockId];
-    return true;
+    return m_needs_rerender[blockId];
 }
 
 GameState::GameState() {
-    collectionToRender = new GameTileCollection();
+    auto* factory = new GameTileCollectionFactory();
+    for (int i = 0; i < 8; ++i) {
+        m_collections[i] = factory->createTileCollectionFromBlueprint(i);
+    }
 }
 
 GameTileCollection *GameState::getCollectionToRender() {
-    return collectionToRender;
+    return m_collections[m_active_map_index];
+}
+
+Player *GameState::getPlayer() {
+    return m_player;
+}
+
+void GameState::setNeedsRender(int blockId, bool value) {
+    m_needs_rerender[blockId] = value;
+}
+
+int GameState::getActiveMapIndex() {
+    return m_active_map_index;
+}
+
+void GameState::setActiveMapIndex(int index) {
+    m_active_map_index = index;
 }

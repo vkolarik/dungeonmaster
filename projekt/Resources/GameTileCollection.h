@@ -13,7 +13,7 @@ class GameTileCollection {
 private:
     std::vector<std::vector<GameTile*>> m_collection;
 public:
-    GameTileCollection();
+    GameTileCollection(std::vector<std::vector<GameTile*>> collection);
     GameTile* getTileAt(int x, int y);
     void setTileAt(int x, int y, GameTile* gameTile);
 };
