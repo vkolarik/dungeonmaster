@@ -43,10 +43,10 @@ InterfaceRenderer::InterfaceRenderer() {
     GameTitle* gameTitle = new GameTitle(10, 1, 99, 3, InterfaceRenderer::UI_HEADER);
     m_renderable_blocks.push_back(gameTitle);
 
-    Inventory* inventory = new Inventory(10, 5, 20, 16, InterfaceRenderer::UI_INVENTORY);
+    Inventory* inventory = new Inventory(10, 5, 25, 20, InterfaceRenderer::UI_INVENTORY);
     m_renderable_blocks.push_back(inventory);
 
-    Stats* stats = new Stats(89, 5, 20, 16, InterfaceRenderer::UI_STATS);
+    Stats* stats = new Stats(84, 5, 25, 20, InterfaceRenderer::UI_STATS);
     m_renderable_blocks.push_back(stats);
 
     GameField* gameField = new GameField(40, 5, 40, 20, InterfaceRenderer::UI_GAME);

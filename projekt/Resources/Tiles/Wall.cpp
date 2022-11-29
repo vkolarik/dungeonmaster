@@ -4,10 +4,12 @@
 
 #include "Wall.h"
 
-Wall::Wall() : GameTile(false, "Nepruchozi zed"){
-
+Wall::Wall() : GameTile(){
+    m_is_passthrough = false;
+    m_is_interactable = false;
+    m_description = "Zed";
 }
 
 char Wall::render() {
-    return (char)220;
+    return (char)254;
 }

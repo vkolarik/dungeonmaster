@@ -17,6 +17,7 @@ private:
     GameTileCollection* m_collections[9];
     Player* m_player = new Player(5, 15);
     std::vector<std::pair<int, int>> m_pixel_updates;
+    std::string m_hint;
 
 public:
     GameState();
@@ -29,6 +30,9 @@ public:
     std::vector<std::pair<int, int>> getPixelUpdates();
     void addPixelUpdate(int x, int y);
     void clearPixelUpdates();
+    void addHint(std::string hint);
+    std::string getHint();
+    void clearHint();
 
 
 };

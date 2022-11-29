@@ -7,15 +7,19 @@
 
 
 #include <string>
+#include "Player.h"
 
 class GameTile {
 protected:
-    bool m_is_interactable;
-    std::string m_description;
+    bool m_is_interactable = false, m_is_passthrough = true;
+    std::string m_description = "GameTile instance";
 public:
-    GameTile(bool isInteractable, std::string description);
+    GameTile();
     virtual char render() = 0;
     bool isInteractable();
+    bool isPassthrough();
+    std::string getDescription();
+    virtual GameTile* interact(Player* player);
 };
 
 

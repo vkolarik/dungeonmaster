@@ -7,14 +7,14 @@
 #include "Tiles/Wall.h"
 /*
 GameTileCollection::GameTileCollection() {
-    std::vector<GameTile*> pom;
+    std::vector<GameTile*> deleteAfterTest;
     for (int i = 0; i < GameEngine::GAME_SIZE; ++i) {
-        pom.clear();
+        deleteAfterTest.clear();
         for (int j = 0; j < GameEngine::GAME_SIZE; ++j) {
-            pom.push_back(new Wall());
+            deleteAfterTest.push_back(new Wall());
             //setTileAt(i, j, new Wall());
         }
-        m_collection.push_back(pom);
+        m_collection.push_back(deleteAfterTest);
     }
 }*/
 

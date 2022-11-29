@@ -15,28 +15,28 @@
 int InputHandler::getCommandForInput(int ascii) {
     switch (ascii) {
         case KEY_UP:
-            GameEngine::debugMessage("up");
+            //GameEngine::debugMessage("up");
             return CommandProcessor::UP;
             break;
         case KEY_DOWN:
-            GameEngine::debugMessage("down");
+            //GameEngine::debugMessage("down");
             return CommandProcessor::DOWN;
             break;
         case KEY_LEFT:
-            GameEngine::debugMessage("left");
+            //GameEngine::debugMessage("left");
             return CommandProcessor::LEFT;
             break;
         case KEY_RIGHT:
-            GameEngine::debugMessage("right");
+            //GameEngine::debugMessage("right");
             return CommandProcessor::RIGHT;
             break;
         case KEY_SPACE:
-            GameEngine::debugMessage("space");
+            //GameEngine::debugMessage("space");
             return CommandProcessor::SPACE;
             break;
         case KEY_E:
             //Vypne hru
-            GameEngine::debugMessage("e");
+            //GameEngine::debugMessage("e");
             return CommandProcessor::EXIT;
             break;
         default:

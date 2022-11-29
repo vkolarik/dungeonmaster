@@ -54,3 +54,22 @@ void GameState::addPixelUpdate(int x, int y) {
 void GameState::clearPixelUpdates() {
     m_pixel_updates.clear();
 }
+
+void GameState::addHint(std::string hint) {
+    if(!(m_hint.empty())){
+        //GameEngine::debugMessage("append");
+        m_hint.append(" | ");
+        m_hint.append(hint);
+    } else {
+        m_hint = hint;
+    }
+    m_needs_rerender[InterfaceRenderer::UI_HINTS] = true;
+}
+
+std::string GameState::getHint() {
+    return m_hint;
+}
+
+void GameState::clearHint() {
+    m_hint.clear();
+}

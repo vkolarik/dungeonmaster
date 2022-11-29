@@ -8,8 +8,19 @@ bool GameTile::isInteractable() {
     return m_is_interactable;
 }
 
-GameTile::GameTile(bool isInteractable, std::string description) {
-    m_is_interactable = isInteractable;
-    m_description = description;
+GameTile::GameTile() {
+
+}
+
+GameTile *GameTile::interact(Player *player) {
+    return this;
+}
+
+bool GameTile::isPassthrough() {
+    return m_is_passthrough;
+}
+
+std::string GameTile::getDescription() {
+    return m_description;
 }
 

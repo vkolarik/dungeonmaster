@@ -6,6 +6,7 @@
 #include "../GameEngine.h"
 #include "Tiles/Wall.h"
 #include "Tiles/FreeSpace.h"
+#include "Tiles/CountDown.h"
 
 void GameTileCollectionFactory::loadBlueprints() {
     //0  1  2
@@ -15,7 +16,7 @@ void GameTileCollectionFactory::loadBlueprints() {
 
     //-----------------0--------------------
     m_blueprints[0] =
-            "XXXXXXXXX  XXXXXXXXX" //1
+            "XXXXXXXXXXXXXXXXXXXX" //1
             "X                  X" //2
             "X  X               X" //3
             "X                  X" //4
@@ -24,8 +25,8 @@ void GameTileCollectionFactory::loadBlueprints() {
             "X                  X" //7
             "X                  X" //8
             "X                  X" //9
-            "                    " //10
-            "                    " //11
+            "X                   " //10
+            "X                   " //11
             "X                  X" //12
             "X                  X" //13
             "X                  X" //14
@@ -39,7 +40,7 @@ void GameTileCollectionFactory::loadBlueprints() {
     ;
     //-----------------1--------------------
     m_blueprints[1] =
-            "XXXXXXXXX  XXXXXXXXX" //1
+            "XXXXXXXXXXXXXXXXXXXX" //1
             "X                  X" //2
             "X  XX              X" //3
             "X                  X" //4
@@ -61,7 +62,7 @@ void GameTileCollectionFactory::loadBlueprints() {
             "XXXXXXXXX  XXXXXXXXX"; //20
     //-----------------2--------------------
     m_blueprints[2] =
-            "XXXXXXXXX  XXXXXXXXX" //1
+            "XXXXXXXXXXXXXXXXXXXX" //1
             "X                  X" //2
             "X XXX              X" //3
             "X                  X" //4
@@ -70,8 +71,8 @@ void GameTileCollectionFactory::loadBlueprints() {
             "X                  X" //7
             "X                  X" //8
             "X                  X" //9
-            "                    " //10
-            "                    " //11
+            "                   X" //10
+            "                   X" //11
             "X                  X" //12
             "X                  X" //13
             "X                  X" //14
@@ -92,8 +93,8 @@ void GameTileCollectionFactory::loadBlueprints() {
             "X                  X" //7
             "X                  X" //8
             "X                  X" //9
-            "                    " //10
-            "                    " //11
+            "X                   " //10
+            "X                   " //11
             "X                  X" //12
             "X                  X" //13
             "X                  X" //14
@@ -108,21 +109,21 @@ void GameTileCollectionFactory::loadBlueprints() {
             "XXXXXXXXX  XXXXXXXXX" //1
             "X                  X" //2
             "X  XXXXX           X" //3
-            "X                  X" //4
+            "X            C     X" //4
             "X                  X" //5
             "X                  X" //6
             "X                  X" //7
-            "X                  X" //8
+            "X   C              X" //8
             "X                  X" //9
             "                    " //10
             "                    " //11
             "X                  X" //12
             "X                  X" //13
-            "X                  X" //14
+            "X             C    X" //14
             "X                  X" //15
             "X                  X" //16
-            "X                  X" //17
-            "X                  X" //18
+            "X          C       X" //17
+            "X      C           X" //18
             "X                  X" //19
             "XXXXXXXXX  XXXXXXXXX"; //20
     //-----------------5--------------------
@@ -136,8 +137,8 @@ void GameTileCollectionFactory::loadBlueprints() {
             "X                  X" //7
             "X                  X" //8
             "X                  X" //9
-            "                    " //10
-            "                    " //11
+            "                   X" //10
+            "                   X" //11
             "X                  X" //12
             "X                  X" //13
             "X                  X" //14
@@ -158,8 +159,8 @@ void GameTileCollectionFactory::loadBlueprints() {
             "X                  X" //7
             "X                  X" //8
             "X                  X" //9
-            "                    " //10
-            "                    " //11
+            "X                   " //10
+            "X                   " //11
             "X                  X" //12
             "X                  X" //13
             "X                  X" //14
@@ -168,7 +169,7 @@ void GameTileCollectionFactory::loadBlueprints() {
             "X                  X" //17
             "X                  X" //18
             "X                  X" //19
-            "XXXXXXXXX  XXXXXXXXX"; //20
+            "XXXXXXXXXXXXXXXXXXXX"; //20
     //-----------------7--------------------
     m_blueprints[7] =
             "XXXXXXXXX  XXXXXXXXX" //1
@@ -190,7 +191,7 @@ void GameTileCollectionFactory::loadBlueprints() {
             "X                  X" //17
             "X                  X" //18
             "X                  X" //19
-            "XXXXXXXXX  XXXXXXXXX"; //20
+            "XXXXXXXXXXXXXXXXXXXX"; //20
     //-----------------8--------------------
     m_blueprints[8] =
             "XXXXXXXXX  XXXXXXXXX" //1
@@ -202,8 +203,8 @@ void GameTileCollectionFactory::loadBlueprints() {
             "X                  X" //7
             "X                  X" //8
             "X                  X" //9
-            "                    " //10
-            "                    " //11
+            "                   X" //10
+            "                   X" //11
             "X                  X" //12
             "X                  X" //13
             "X                  X" //14
@@ -212,7 +213,7 @@ void GameTileCollectionFactory::loadBlueprints() {
             "X                  X" //17
             "X                  X" //18
             "X                  X" //19
-            "XXXXXXXXX  XXXXXXXXX"; //20
+            "XXXXXXXXXXXXXXXXXXXX"; //20
 }
 
 GameTileCollectionFactory::GameTileCollectionFactory() {
@@ -238,6 +239,7 @@ GameTileCollection *GameTileCollectionFactory::createTileCollectionFromBlueprint
 
 GameTile *GameTileCollectionFactory::getTileForShortcut(std::string shortcut) {
     if(shortcut == "X") return new Wall();
+    if(shortcut == "C") return new CountDown();
     return new FreeSpace();
 }
 

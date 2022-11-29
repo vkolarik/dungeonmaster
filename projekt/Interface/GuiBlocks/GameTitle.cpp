@@ -7,9 +7,9 @@
 
 void GameTitle::render(GameState *gameState) {
     //Render hlavicky
-    fill();
-    std::string message = "   Toto je nazev hry   ";
-    print((m_width * 0.5) - (message.length() * 0.5), 1, message);
+    //fillWithChar(char(196)); //─
+    printBorder();
+    printToCenter(1, "Console DungeonMaster 69");
     gameState->setNeedsRender(InterfaceRenderer::UI_HEADER, false);
 }
 

@@ -9,7 +9,9 @@
 class Player {
 private:
     int m_location_x, m_location_y;
+
 public:
+    int deleteAfterTest = 0;
     Player(int x, int y);
     int getLocationX();
     int getLocationY();
