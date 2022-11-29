@@ -34,6 +34,8 @@ void InterfaceRenderer::printGameState(GameState *gameState) {
     for(RenderableBlock* block : m_renderable_blocks){
         block->checkAndRender(gameState);
     }
+    //zaparkovat na zacatek kurzor
+    printCharToXY(0, 0, ' ');
 }
 
 InterfaceRenderer::InterfaceRenderer() {

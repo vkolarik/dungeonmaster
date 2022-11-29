@@ -21,6 +21,7 @@ public:
     static const int UI_STATS = 3;
     static const int UI_HINTS = 4;
     static const int UI_CONTROLS = 5;
+    static const int UI_MAP_RERENDER = 6;
     InterfaceRenderer();
     static void printToXY(int x, int y, std::string s);
     static void printCharToXY(int x, int y, char s);

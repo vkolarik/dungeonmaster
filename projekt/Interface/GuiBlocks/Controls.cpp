@@ -3,6 +3,7 @@
 //
 
 #include "Controls.h"
+#include "..\InterfaceRenderer.h"
 
 Controls::Controls(int x, int y, int width, int height, int id) : RenderableBlock(x, y, width, height, id) {
 
@@ -10,4 +11,5 @@ Controls::Controls(int x, int y, int width, int height, int id) : RenderableBloc
 
 void Controls::render(GameState *gameState) {
     print(0, 0, "[pohyb:sipky] [interakce:mezernik] [ukonceni:e]    Projekt ZOO 2022/23 xkolari1, xpecink1, xfilips1");
+    gameState->setNeedsRender(InterfaceRenderer::UI_CONTROLS, false);
 }

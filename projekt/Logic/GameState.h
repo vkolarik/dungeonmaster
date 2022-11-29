@@ -12,10 +12,11 @@
 
 class GameState {
 private:
-    bool m_needs_rerender[10] = {true, true, true, true, true, true, true, true, true, true};
+    bool m_needs_rerender[10] = {true, true, true, true, true, true, true, false, false, false};
     int m_active_map_index = 4;
-    GameTileCollection* m_collections[8];
+    GameTileCollection* m_collections[9];
     Player* m_player = new Player(5, 15);
+    std::vector<std::pair<int, int>> m_pixel_updates;
 
 public:
     GameState();
@@ -25,6 +26,9 @@ public:
     Player* getPlayer();
     int getActiveMapIndex();
     void setActiveMapIndex(int index);
+    std::vector<std::pair<int, int>> getPixelUpdates();
+    void addPixelUpdate(int x, int y);
+    void clearPixelUpdates();
 
 
 };

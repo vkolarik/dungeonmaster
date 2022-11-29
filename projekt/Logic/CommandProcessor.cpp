@@ -45,30 +45,41 @@ GameState *CommandProcessor::processCommand(int command, GameState *gameState) {
     }
     //Doleva
     if(moveX < 0) {
+        //Podchytime utikani doleva
+        if(gameState->getActiveMapIndex() + 1 == 1 || (gameState->getActiveMapIndex() + 1) % 4 == 0) return gameState;
         supposedNewActive = gameState->getActiveMapIndex() - 1;
         supposedNewX = GameEngine::GAME_SIZE - 1;
     }
     //Doprava
     if(moveX >= GameEngine::GAME_SIZE) {
+        //Podchytime utikani doleva
+        if((gameState->getActiveMapIndex() + 1) % 3 == 0) return gameState;
         supposedNewActive = gameState->getActiveMapIndex() + 1;
         supposedNewX = 0;
     }
 
-    //pokud je pohyb mimo
-    if(supposedNewActive >= 0 and supposedNewActive <= 8){
+    //pokud je pohyb mimo ale neni mimo mensi 3x3 matrix
+    if(supposedNewActive >= 0 and supposedNewActive <= 8) {
         //prejdi na jinou mapu a nastav nove souradnice pro playera
         gameState->setActiveMapIndex(supposedNewActive);
-        if(supposedNewY >= 0) gameState->getPlayer()->setLocationY(supposedNewY);
-        if(supposedNewX >= 0) gameState->getPlayer()->setLocationX(supposedNewX);
+        if (supposedNewY >= 0) gameState->getPlayer()->setLocationY(supposedNewY);
+        if (supposedNewX >= 0) gameState->getPlayer()->setLocationX(supposedNewX);
+        //pokud sice nejdeme do jine mapy ale pretikame mimo hranice aktualni mapy
+    }else if(moveX >= GameEngine::GAME_SIZE ||
+            moveY >= GameEngine::GAME_SIZE ||
+            moveX < 0 || moveY < 0){
+        return gameState;
     }else{
         //jinak se zkus pohnout, pokud to jde udelej interakci a updatuj souradnice
         GameTile* tileToInteract = gameState->getCollectionToRender()->getTileAt(moveX, moveY);
 
         if(tileToInteract->isInteractable()){
             //TODO actually interact with it
+            gameState->addPixelUpdate(gameState->getPlayer()->getLocationX(), gameState->getPlayer()->getLocationY());
             gameState->getPlayer()->setLocationX(moveX);
             gameState->getPlayer()->setLocationY(moveY);
             gameState->getCollectionToRender()->setTileAt(moveY, moveX, new FreeSpace());
+            gameState->addPixelUpdate(moveX, moveY);
         }
     }
 
