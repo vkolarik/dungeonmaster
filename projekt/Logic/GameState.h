@@ -10,7 +10,7 @@
 #include "../Resources/GameTileCollection.h"
 #include "../Resources/Player.h"
 
-class GameState {
+class GameState: public Player {
 private:
     bool m_needs_rerender[10] = {true, true, true, true, true, true, true, false, false, false};
     int m_active_map_index = 4;

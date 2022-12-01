@@ -7,8 +7,11 @@
 
 
 #include "../RenderableBlock.h"
+#include <vector>
 
 class Inventory : public RenderableBlock {
+private:
+    //TODO vector m_inventroy;
 public:
     Inventory(int x, int y, int width, int height, int id);
     void render(GameState* gameState);

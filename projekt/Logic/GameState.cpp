@@ -9,6 +9,7 @@
 #include "../GameEngine.h"
 
 bool GameState::needsRerender(int blockId) {
+    new Player();
     return m_needs_rerender[blockId];
 }
 
