@@ -116,7 +116,7 @@ void GameTileCollectionFactory::loadBlueprints() {
             "X   C              X" //8
             "X                  X" //9
             "                    " //10
-            "                    " //11
+            "          PPP       " //11
             "X                  X" //12
             "X                  X" //13
             "X             C    X" //14
@@ -240,6 +240,7 @@ GameTileCollection *GameTileCollectionFactory::createTileCollectionFromBlueprint
 GameTile *GameTileCollectionFactory::getTileForShortcut(std::string shortcut) {
     if(shortcut == "X") return new Wall();
     if(shortcut == "C") return new CountDown();
+    if(shortcut == "P") return new CountDown();
     return new FreeSpace();
 }
 
