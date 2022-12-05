@@ -240,6 +240,7 @@ GameTileCollection *GameTileCollectionFactory::createTileCollectionFromBlueprint
 GameTile *GameTileCollectionFactory::getTileForShortcut(std::string shortcut) {
     if(shortcut == "X") return new Wall();
     if(shortcut == "C") return new CountDown();
+    if(shortcut == "P") return new CountDown();
     return new FreeSpace();
 }
 
