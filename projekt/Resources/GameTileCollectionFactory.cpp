@@ -116,7 +116,7 @@ void GameTileCollectionFactory::loadBlueprints() {
             "X   C              X" //8
             "X                  X" //9
             "                    " //10
-            "                    " //11
+            "          PPP       " //11
             "X                  X" //12
             "X                  X" //13
             "X             C    X" //14
