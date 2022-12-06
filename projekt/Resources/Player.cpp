@@ -39,11 +39,11 @@ void Player::setLocationY(int y) {
     m_location_y = y;
 }
 
-void Player::setHealth(float health) {
+void Player::setHealth(int health) {
     m_health = health;
 }
 
-void Player::setDamage(float damage) {
+void Player::setDamage(int damage) {
     m_damage = damage;
 }
 

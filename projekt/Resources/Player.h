@@ -24,8 +24,8 @@ public:
     int getLocationY();
     int getHealth();
     int getDamage();
-    void setHealth(float health);
-    void setDamage(float damage);
+    void setHealth(int health);
+    void setDamage(int damage);
     void setLocationX(int x);
     void setLocationY(int y);
     char render();
