@@ -17,11 +17,12 @@ private:
 public:
     static const int UI_HEADER = 0;
     static const int UI_GAME = 1;
-    static const int UI_INVENTORY = 2;
+    static const int UI_WEAPONS = 2;
     static const int UI_STATS = 3;
     static const int UI_HINTS = 4;
     static const int UI_CONTROLS = 5;
     static const int UI_MAP_RERENDER = 6;
+    static const int UI_POTION_INVENTORY = 7;
     InterfaceRenderer();
     static void printToXY(int x, int y, std::string s);
     static void printCharToXY(int x, int y, char s);

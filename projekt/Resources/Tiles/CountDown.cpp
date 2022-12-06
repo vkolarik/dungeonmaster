@@ -16,7 +16,7 @@ char CountDown::render() {
 }
 
 GameTile *CountDown::interact(Player *player) {
-    player->deleteAfterTest++;
+    player->setHealth(player->getHealth() + 1);
     m_count--;
     if(m_count > 0){
         return this;

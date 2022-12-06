@@ -19,7 +19,7 @@ int Player::getLocationY() {
     return m_location_y;
 }
 
-float Player::getHeaalth() {
+float Player::getHealth() {
     return m_health;
 }
 
@@ -37,4 +37,12 @@ void Player::setLocationX(int x) {
 
 void Player::setLocationY(int y) {
     m_location_y = y;
+}
+
+void Player::setHealth(float health) {
+    m_health = health;
+}
+
+void Player::setDamage(float damage) {
+    m_damage = damage;
 }

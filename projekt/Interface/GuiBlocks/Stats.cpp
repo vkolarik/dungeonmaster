@@ -12,8 +12,8 @@ Stats::Stats(int x, int y, int width, int height, int id) : RenderableBlock(x, y
 void Stats::render(GameState *gameState) {
     printBorder();
     printToCenter( 0, "Staty");
-    print(1, 1, std::to_string(gameState->getPlayer()->deleteAfterTest));
-    print(1, 2, ("health: " + std::to_string(gameState->getHeaalth())));
-    print(1, 3, ("damage: " + std::to_string(gameState->getDamage())));
+    //print(1, 1, std::to_string(gameState->getPlayer()->deleteAfterTest));
+    print(1, 1, ("health: " + std::to_string(gameState->getPlayer()->getHealth())));
+    print(1, 2, ("damage: " + std::to_string(gameState->getDamage())));
     gameState->setNeedsRender(InterfaceRenderer::UI_STATS, false);
 }

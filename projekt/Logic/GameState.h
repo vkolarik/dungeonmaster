@@ -12,7 +12,7 @@
 
 class GameState: public Player {
 private:
-    bool m_needs_rerender[10] = {true, true, true, true, true, true, true, false, false, false};
+    bool m_needs_rerender[10] = {true, true, true, true, true, true, true, true, false, false};
     int m_active_map_index = 4;
     GameTileCollection* m_collections[9];
     Player* m_player = new Player(5, 15);

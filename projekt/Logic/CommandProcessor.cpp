@@ -82,7 +82,7 @@ GameState *CommandProcessor::processCommand(int command, GameState *gameState) {
         if(tileToInteract->isInteractable()){
             //dochazi k interakci, takze znova vyrendrujeme inventar a staty
             gameState->setNeedsRender(InterfaceRenderer::UI_STATS, true);
-            gameState->setNeedsRender(InterfaceRenderer::UI_INVENTORY, true);
+            gameState->setNeedsRender(InterfaceRenderer::UI_WEAPONS, true);
 
             gameState->getCollectionToRender()->setTileAt(moveX, moveY, tileToInteract->interact(gameState->getPlayer()));
             gameState->addPixelUpdate(moveX, moveY);
