@@ -116,17 +116,17 @@ void GameTileCollectionFactory::loadBlueprints() {
             "X                  X" //6
             "X                  X" //7
             "X   C              X" //8
-            "X                  X" //9
+            "X          W       X" //9
             "                    " //10
             "          CCC       " //11
             "X                  X" //12
-            "X         o        X" //13
+            "X         O        X" //13
             "X             C    X" //14
-            "X     A            X" //15
-            "X                  X" //16
+            "X     W            X" //15
+            "X              W   X" //16
             "X          C       X" //17
             "X      C           X" //18
-            "X                  X" //19
+            "X              W   X" //19
             "XXXXXXXXX  XXXXXXXXX"; //20
     //-----------------5--------------------
     m_blueprints[5] =
@@ -246,7 +246,7 @@ GameTile *GameTileCollectionFactory::getTileForShortcut(std::string shortcut) {
     if(shortcut == "O") return new PotionTile("Obelix mix", 10);
     if(shortcut == "P") return new PotionTile("Ultra power health potion", 10);
     //WeaponTile
-    if(shortcut == "A") return new WeaponTile("Thors hammer", 15);
+    if(shortcut == "W") return new WeaponTile("Thors hammer", 15);
     return new FreeSpace();
 }
 

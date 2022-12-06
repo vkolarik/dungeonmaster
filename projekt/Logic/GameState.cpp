@@ -74,3 +74,19 @@ std::string GameState::getHint() {
 void GameState::clearHint() {
     m_hint.clear();
 }
+
+bool GameState::getChooseWeaponMode() {
+    return m_choose_weapon_mode;
+}
+
+void GameState::setChooseWeaponMode(bool value) {
+    m_choose_weapon_mode = value;
+}
+
+bool GameState::getChoosePotionMode() {
+    return m_choose_potion_mode;
+}
+
+void GameState::setChoosePotionMode(bool value) {
+    m_choose_potion_mode = value;
+}

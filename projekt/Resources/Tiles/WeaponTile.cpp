@@ -10,6 +10,7 @@ WeaponTile::WeaponTile(std::string name, int damage) {
     m_damage = damage;
     m_is_passthrough = true;
     m_is_interactable = true;
+    m_weapon = new Weapon("Ses posrals");
 }
 
 std::string WeaponTile::getName() {
@@ -25,5 +26,6 @@ char WeaponTile::render() {
 }
 
 GameTile *WeaponTile::interact(Player *player) {
+    player->addWeapon(m_weapon);
     return new FreeSpace();
 }

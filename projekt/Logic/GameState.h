@@ -18,6 +18,7 @@ private:
     Player* m_player = new Player(5, 15);
     std::vector<std::pair<int, int>> m_pixel_updates;
     std::string m_hint;
+    bool m_choose_weapon_mode = false, m_choose_potion_mode = false;
 
 public:
     GameState();
@@ -33,6 +34,10 @@ public:
     void addHint(std::string hint);
     std::string getHint();
     void clearHint();
+    bool getChooseWeaponMode();
+    bool getChoosePotionMode();
+    void setChooseWeaponMode(bool value);
+    void setChoosePotionMode(bool value);
 
 
 };

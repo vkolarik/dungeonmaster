@@ -6,8 +6,15 @@
 #define PROJEKT_WEAPON_H
 
 
+#include <string>
+
 class Weapon {
 //Virtual
+private:
+    std::string m_name;
+public:
+    Weapon(std::string name);
+    std::string getName();
 };
 
 

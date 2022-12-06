@@ -13,6 +13,7 @@ private:
     char m_shortcut = 'W';
     std::string m_name;
     int m_damage;
+    Weapon* m_weapon;
 public:
     WeaponTile(std::string name, int damage);
     std::string getName();

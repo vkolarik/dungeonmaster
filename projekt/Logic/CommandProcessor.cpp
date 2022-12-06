@@ -26,12 +26,44 @@ GameState *CommandProcessor::processCommand(int command, GameState *gameState) {
             moveX = 1;
             gameState->addHint("Doprava");
             break;
+        case CommandProcessor::ENTER:
+            //todo vypij potion
+            GameEngine::debugMessage("enter");
+            //if(gameState->getChoosePotionMode()) gameState->getPlayer()->getAktivniPotion()->vypij()
+            gameState->setChoosePotionMode(false);
+            gameState->setChooseWeaponMode(false);
+            break;
+        case CommandProcessor::POTION_MENU:
+            gameState->setChoosePotionMode(!gameState->getChoosePotionMode());
+            break;
+        case CommandProcessor::WEAPON_MENU:
+            gameState->setChooseWeaponMode(!gameState->getChooseWeaponMode());
+            break;
         default:
             return gameState;
     }
 
+
+    if(gameState->getChooseWeaponMode()) {
+        gameState->clearHint();
+        gameState->addHint("Rezim vyberu zbrane");
+        std::vector<Weapon*> collection = gameState->getPlayer()->getWeaponCollection();
+        int new_id = gameState->getPlayer()->getActiveWeaponID() + moveY;
+        //GameEngine::debugMessage(std::to_string(!collection.empty())+":"+std::to_string(collection.size())+":"+std::to_string(new_id)+":");
+        if((!collection.empty()) && (new_id < collection.size()) && (new_id >= 0)){
+            gameState->getPlayer()->setActiveWeapon(new_id);
+        }
+        gameState->setNeedsRender(InterfaceRenderer::UI_WEAPONS, true);
+        return gameState;
+    }
+
+    //Todo dodelat totez pro potiony
+    //if(gameState->getChoosePotionMode()) gameState->setActivePotion(gameState->getActiveWeaponID()+moveX);
+
     moveX += gameState->getPlayer()->getLocationX();
     moveY += gameState->getPlayer()->getLocationY();
+
+
 
 
     //Priprava na kontrolu prechodu na jinou mapu

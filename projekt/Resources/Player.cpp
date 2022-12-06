@@ -46,3 +46,38 @@ void Player::setHealth(float health) {
 void Player::setDamage(float damage) {
     m_damage = damage;
 }
+
+void Player::addWeapon(Weapon *weapon) {
+    m_weapons.push_back(weapon);
+}
+
+void Player::setActiveWeapon(int id) {
+    m_active_weapon_id = id;
+}
+
+int Player::getActiveWeaponID() {
+    return m_active_weapon_id;
+}
+
+Weapon *Player::getActiveWeapon() {
+    return m_weapons.at(getActiveWeaponID());
+}
+
+void Player::addPotion(Potion *potion) {
+    m_potions.push_back(potion);
+}
+
+void Player::usePotion(int id) {
+    //Todo logika pouzivani potionu
+
+    //Smazani pouziteho potionu
+    m_potions.erase(m_potions.begin()+id);
+}
+
+std::vector<Weapon *> Player::getWeaponCollection() {
+    return m_weapons;
+}
+
+std::vector<Potion *> Player::getPotionCollection() {
+    return m_potions;
+}
