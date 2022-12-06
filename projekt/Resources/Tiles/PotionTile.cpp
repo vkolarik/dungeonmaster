@@ -10,6 +10,7 @@ PotionTile::PotionTile(std::string name, int bonus) {
     m_bonus = bonus;
     m_is_passthrough = true;
     m_is_interactable = true;
+    m_potion = new Potion(name, bonus);
 }
 
 std::string PotionTile::getName() {
@@ -24,7 +25,7 @@ char PotionTile::render() {
     return m_shortcut;
 }
 
-//TODO potion sa prida do PotionInventory
 GameTile *PotionTile::interact(Player *player) {
+    player->addPotion(m_potion);
     return new FreeSpace();
 }

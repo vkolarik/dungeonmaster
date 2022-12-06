@@ -5,8 +5,7 @@
 #include "WeaponInventory.h"
 #include "../InterfaceRenderer.h"
 
-WeaponInventory::WeaponInventory(int x, int y, int width, int height, int id) : RenderableBlock(x, y, width, height,
-                                                                                                id) {}
+WeaponInventory::WeaponInventory(int x, int y, int width, int height, int id) : RenderableBlock(x, y, width, height, id) {}
 
 void WeaponInventory::render(GameState *gameState) {
     printBorder();

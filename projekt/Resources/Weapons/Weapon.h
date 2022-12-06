@@ -12,9 +12,11 @@ class Weapon {
 //Virtual
 private:
     std::string m_name;
+    int m_damage;
 public:
-    Weapon(std::string name);
+    Weapon(std::string name, int damage);
     std::string getName();
+    int getDamage();
 };
 
 

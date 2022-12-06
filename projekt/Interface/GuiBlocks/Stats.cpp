@@ -14,6 +14,7 @@ void Stats::render(GameState *gameState) {
     printToCenter( 0, "Staty");
     //print(1, 1, std::to_string(gameState->getPlayer()->deleteAfterTest));
     print(1, 1, ("health: " + std::to_string(gameState->getPlayer()->getHealth())));
-    print(1, 2, ("damage: " + std::to_string(gameState->getDamage())));
+    print(1, 2, ("damage: " + std::to_string(gameState->getPlayer()->getDamage())));
+
     gameState->setNeedsRender(InterfaceRenderer::UI_STATS, false);
 }

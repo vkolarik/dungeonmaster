@@ -13,15 +13,12 @@ private:
     char m_shortcut = 'P';
     std::string m_name;
     int m_bonus;
+    Potion* m_potion;
 public:
     PotionTile(std::string name, int bonus);
-
     std::string getName();
-
     int getBonus();
-
     char render();
-
     GameTile *interact(Player *player);
 
 

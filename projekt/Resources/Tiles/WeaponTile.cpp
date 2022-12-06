@@ -10,7 +10,7 @@ WeaponTile::WeaponTile(std::string name, int damage) {
     m_damage = damage;
     m_is_passthrough = true;
     m_is_interactable = true;
-    m_weapon = new Weapon(name);
+    m_weapon = new Weapon(name, damage);
 }
 
 std::string WeaponTile::getName() {

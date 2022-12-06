@@ -5,9 +5,17 @@
 #ifndef PROJEKT_POTION_H
 #define PROJEKT_POTION_H
 
+#include <string>
 
 class Potion {
 //virtual
+private:
+    std::string m_name;
+    int m_bonus;
+public:
+    Potion(std::string name, int bonus);
+    std::string getName();
+    int getBonus();
 };
 
 

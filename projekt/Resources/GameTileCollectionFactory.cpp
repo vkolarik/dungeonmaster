@@ -109,24 +109,24 @@ void GameTileCollectionFactory::loadBlueprints() {
     //-----------------4--------------------
     m_blueprints[4] =
             "XXXXXXXXX  XXXXXXXXX" //1
-            "X                  X" //2
+            "X     S       Y    X" //2
             "X  XXXXX           X" //3
             "X            C     X" //4
             "X            P     X" //5
-            "X      K           X" //6
+            "X       U          X" //6
             "X                  X" //7
             "X   C              X" //8
-            "X          W       X" //9
+            "X          A       X" //9
             "     K              " //10
             "          CCC       " //11
             "X                  X" //12
             "X         O        X" //13
             "X             C    X" //14
             "X     W            X" //15
-            "X              W   X" //16
+            "X                  X" //16
             "X          C       X" //17
             "X      C           X" //18
-            "X              W   X" //19
+            "X                  X" //19
             "XXXXXXXXX  XXXXXXXXX"; //20
     //-----------------5--------------------
     m_blueprints[5] =
@@ -244,10 +244,14 @@ GameTile *GameTileCollectionFactory::getTileForShortcut(std::string shortcut) {
     if(shortcut == "C") return new CountDown();
     //Potions
     if(shortcut == "O") return new PotionTile("Obelix mix", 10);
-    if(shortcut == "P") return new PotionTile("Ultra power health potion", 10);
+    if(shortcut == "P") return new PotionTile("Uber health potion", 15);
+    if(shortcut == "U") return new PotionTile("Vodka", -5);
+    if(shortcut == "S") return new PotionTile("Bull's fire", 50);
+    if(shortcut == "Y") return new PotionTile("Sui juice", 15);
     //WeaponTile
-    if(shortcut == "W") return new WeaponTile("Thors hammer", 15);
+    if(shortcut == "W") return new WeaponTile("Thors hammer", 10);
     if(shortcut == "K") return new WeaponTile("Yo mama knife", 15);
+    if(shortcut == "A") return new WeaponTile("Frost Axe", 12);
     return new FreeSpace();
 }
 
