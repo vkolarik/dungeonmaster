@@ -7,8 +7,8 @@
 #include "Tiles/Wall.h"
 #include "Tiles/FreeSpace.h"
 #include "Tiles/CountDown.h"
-#include "Tiles/Potion.h"
-#include "Tiles/Weapons.h"
+#include "Tiles/PotionTile.h"
+#include "Tiles/WeaponTile.h"
 
 void GameTileCollectionFactory::loadBlueprints() {
     //0  1  2
@@ -243,10 +243,10 @@ GameTile *GameTileCollectionFactory::getTileForShortcut(std::string shortcut) {
     if(shortcut == "X") return new Wall();
     if(shortcut == "C") return new CountDown();
     //Potions
-    if(shortcut == "o") return new Potion("Obelix mix", 10);
-    if(shortcut == "P") return new Potion("Ultra power health potion", 10);
-    //Weapons
-    if(shortcut == "A") return new Weapons("Thors hammer", 15);
+    if(shortcut == "O") return new PotionTile("Obelix mix", 10);
+    if(shortcut == "P") return new PotionTile("Ultra power health potion", 10);
+    //WeaponTile
+    if(shortcut == "A") return new WeaponTile("Thors hammer", 15);
     return new FreeSpace();
 }
 

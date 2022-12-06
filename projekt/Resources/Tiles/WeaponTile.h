@@ -1,19 +1,20 @@
 //
-// Created by adamz on 6. 12. 2022.
+// Created by root on 06.12.2022.
 //
 
-#ifndef PROJEKT_WEAPONS_H
-#define PROJEKT_WEAPONS_H
+#ifndef PROJEKT_WEAPONTILE_H
+#define PROJEKT_WEAPONTILE_H
+
 
 #include "../GameTile.h"
 
-class Weapons : public GameTile {
+class WeaponTile : public GameTile {
 private:
     char m_shortcut = 'W';
     std::string m_name;
     int m_damage;
 public:
-    Weapons(std::string name, int damage);
+    WeaponTile(std::string name, int damage);
     std::string getName();
     int getDamage();
     char render();
@@ -22,4 +23,4 @@ public:
 };
 
 
-#endif //PROJEKT_WEAPONS_H
+#endif //PROJEKT_WEAPONTILE_H
