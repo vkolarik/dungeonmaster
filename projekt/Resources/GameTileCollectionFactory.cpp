@@ -113,11 +113,11 @@ void GameTileCollectionFactory::loadBlueprints() {
             "X  XXXXX           X" //3
             "X            C     X" //4
             "X            P     X" //5
-            "X                  X" //6
+            "X      K           X" //6
             "X                  X" //7
             "X   C              X" //8
             "X          W       X" //9
-            "                    " //10
+            "     K              " //10
             "          CCC       " //11
             "X                  X" //12
             "X         O        X" //13
@@ -247,6 +247,7 @@ GameTile *GameTileCollectionFactory::getTileForShortcut(std::string shortcut) {
     if(shortcut == "P") return new PotionTile("Ultra power health potion", 10);
     //WeaponTile
     if(shortcut == "W") return new WeaponTile("Thors hammer", 15);
+    if(shortcut == "K") return new WeaponTile("Yo mama knife", 15);
     return new FreeSpace();
 }
 
