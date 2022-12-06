@@ -8,6 +8,7 @@
 #include "Tiles/FreeSpace.h"
 #include "Tiles/CountDown.h"
 #include "Tiles/Potion.h"
+#include "Tiles/Weapons.h"
 
 void GameTileCollectionFactory::loadBlueprints() {
     //0  1  2
@@ -111,7 +112,7 @@ void GameTileCollectionFactory::loadBlueprints() {
             "X                  X" //2
             "X  XXXXX           X" //3
             "X            C     X" //4
-            "X                  X" //5
+            "X            P     X" //5
             "X                  X" //6
             "X                  X" //7
             "X   C              X" //8
@@ -121,7 +122,7 @@ void GameTileCollectionFactory::loadBlueprints() {
             "X                  X" //12
             "X         o        X" //13
             "X             C    X" //14
-            "X                  X" //15
+            "X     A            X" //15
             "X                  X" //16
             "X          C       X" //17
             "X      C           X" //18
@@ -241,7 +242,11 @@ GameTileCollection *GameTileCollectionFactory::createTileCollectionFromBlueprint
 GameTile *GameTileCollectionFactory::getTileForShortcut(std::string shortcut) {
     if(shortcut == "X") return new Wall();
     if(shortcut == "C") return new CountDown();
+    //Potions
     if(shortcut == "o") return new Potion("Obelix mix", 10);
+    if(shortcut == "P") return new Potion("Ultra power health potion", 10);
+    //Weapons
+    if(shortcut == "A") return new Weapons("Thors hammer", 15);
     return new FreeSpace();
 }
 

@@ -6,7 +6,6 @@
 #include "FreeSpace.h"
 
 Potion::Potion(std::string name, int bonus) {
-    m_shortcut ;
     m_name = name;
     m_bonus = bonus;
     m_is_passthrough = true;
