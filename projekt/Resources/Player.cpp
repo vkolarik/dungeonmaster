@@ -19,11 +19,11 @@ int Player::getLocationY() {
     return m_location_y;
 }
 
-float Player::getHealth() {
+int Player::getHealth() {
     return m_health;
 }
 
-float Player::getDamage() {
+int Player::getDamage() {
     return m_damage;
 }
 

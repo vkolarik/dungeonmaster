@@ -10,8 +10,8 @@
 class Player {
 private:
     int m_location_x, m_location_y, m_active_weapon = -1;
-    float m_health = 100;
-    float m_damage = 50;
+    int m_health = 100;
+    int m_damage = 50;
     //std::vector<Weapon*> m_weapons;
 public:
     int deleteAfterTest = 0;
@@ -19,8 +19,8 @@ public:
     Player();
     int getLocationX();
     int getLocationY();
-    float getHealth();
-    float getDamage();
+    int getHealth();
+    int getDamage();
     void setHealth(float health);
     void setDamage(float damage);
     void setLocationX(int x);
