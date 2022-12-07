@@ -58,7 +58,8 @@ GameState *CommandProcessor::processCommand(int command, GameState *gameState) {
     }
 
     //Todo dodelat totez pro potiony
-    //if(gameState->getChoosePotionMode()) gameState->setActivePotion(gameState->getActiveWeaponID()+moveX);
+    //if(gameState->getChoosePotionMode()) {
+    //    gameState->getPlayer();}//gameState->setActivePotion(gameState->getActiveWeaponID()+moveX);
 
     moveX += gameState->getPlayer()->getLocationX();
     moveY += gameState->getPlayer()->getLocationY();

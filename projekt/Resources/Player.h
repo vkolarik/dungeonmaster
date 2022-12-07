@@ -22,19 +22,23 @@ public:
     Player();
     int getLocationX();
     int getLocationY();
+    void setLocationX(int x);
+    void setLocationY(int y);
+    char render();
+
     int getHealth();
     int getDamage();
     void setHealth(int health);
     void setDamage(int damage);
-    void setLocationX(int x);
-    void setLocationY(int y);
-    char render();
+
     void addWeapon(Weapon* weapon);
     void setActiveWeapon(int id);
     Weapon* getActiveWeapon();
     int getActiveWeaponID();
+
     void addPotion(Potion* potion);
     void usePotion(int id);
+
     std::vector<Weapon*> getWeaponCollection();
     std::vector<Potion*> getPotionCollection();
 };

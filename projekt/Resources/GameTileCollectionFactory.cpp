@@ -240,14 +240,19 @@ GameTileCollection *GameTileCollectionFactory::createTileCollectionFromBlueprint
 }
 
 GameTile *GameTileCollectionFactory::getTileForShortcut(std::string shortcut) {
+    // pismena, ktore su uz zabrane: A, C, K, O, P, S, U, W, X, Y
+
+    //Wall
     if(shortcut == "X") return new Wall();
     if(shortcut == "C") return new CountDown();
+
     //Potions
     if(shortcut == "O") return new PotionTile("Obelix mix", 10);
     if(shortcut == "P") return new PotionTile("Uber health potion", 15);
     if(shortcut == "U") return new PotionTile("Vodka", -5);
     if(shortcut == "S") return new PotionTile("Bull's fire", 50);
     if(shortcut == "Y") return new PotionTile("Sui juice", 15);
+
     //WeaponTile
     if(shortcut == "W") return new WeaponTile("Thors hammer", 10);
     if(shortcut == "K") return new WeaponTile("Yo mama knife", 15);
