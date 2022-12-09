@@ -154,66 +154,66 @@ void GameTileCollectionFactory::loadBlueprints() {
     m_blueprints[6] =
             "XXXXXXXXX  XXXXXXXXX" //1
             "X                  X" //2
-            "X  XXXXXXX         X" //3
-            "X                  X" //4
-            "X                  X" //5
-            "X                  X" //6
-            "X                  X" //7
-            "X                  X" //8
-            "X                  X" //9
-            "X                   " //10
-            "X                   " //11
-            "X                  X" //12
-            "X                  X" //13
-            "X                  X" //14
-            "X                  X" //15
-            "X                  X" //16
-            "X                  X" //17
-            "X                  X" //18
-            "X                  X" //19
+            "X  XXXXXXX  XXXXX  X" //3
+            "X            XXXX  X" //4
+            "XXX           XXX  X" //5
+            "X  XX XX XX XX   XXX" //6
+            "XXX                X" //7
+            "X   XX XX XX       X" //8
+            "X              XXXXX" //9
+            "X             XX    " //10
+            "X               X   " //11
+            "X  XX  XX     X X  X" //12
+            "X  XXX  XX    X X  X" //13
+            "X  XX     X   X X  X" //14
+            "X  XX   X  X  X X  X" //15
+            "X  XXX  X   X X X  X" //16
+            "X  X     XX   X X  X" //17
+            "X  XXXX XX   X  X  X" //18
+            "X      X   XX      X" //19
             "XXXXXXXXXXXXXXXXXXXX"; //20
     //-----------------7--------------------
     m_blueprints[7] =
             "XXXXXXXXX  XXXXXXXXX" //1
             "X                  X" //2
-            "X  XXXXXXXX        X" //3
+            "XXXXXXXX  XXXXXXXXXX" //3
             "X                  X" //4
-            "X                  X" //5
-            "X                  X" //6
-            "X                  X" //7
-            "X                  X" //8
-            "X                  X" //9
-            "                    " //10
-            "                    " //11
-            "X                  X" //12
-            "X                  X" //13
-            "X                  X" //14
-            "X                  X" //15
-            "X                  X" //16
-            "X                  X" //17
-            "X                  X" //18
-            "X                  X" //19
+            "XXXX XXX  XXX   XXXX" //5
+            "X       XX         X" //6
+            "X  XXXXXXXXXXXXX   X" //7
+            "X   XXXXXXXXXXX    X" //8
+            "X     XXXXXXXX     X" //9
+            "       XXXXXX       " //10
+            "        XXXX        " //11
+            "X        XX        X" //12
+            "X     XXX  XXX     X" //13
+            "X    X       X     X" //14
+            "X   X    XX  X     X" //15
+            "X  X    X  X   X   X" //16
+            "X X    X    X   X  X" //17
+            "X  X  X      X     X" //18
+            "X    X        X    X" //19
             "XXXXXXXXXXXXXXXXXXXX"; //20
     //-----------------8--------------------
     m_blueprints[8] =
             "XXXXXXXXX  XXXXXXXXX" //1
-            "X                  X" //2
-            "X  XXXXXXXXX       X" //3
-            "X                  X" //4
-            "X                  X" //5
-            "X                  X" //6
-            "X                  X" //7
-            "X                  X" //8
-            "X                  X" //9
-            "                   X" //10
-            "                   X" //11
-            "X                  X" //12
-            "X                  X" //13
-            "X                  X" //14
-            "X                  X" //15
-            "X                  X" //16
-            "X                  X" //17
-            "X                  X" //18
+            "X       X    X     X" //2
+            "X  XXXXXXXXX X  XX X" //3
+            "X  X         X  XX X" //4
+            "X  X XXXXXXXXX  X  X" //5
+            "X  X X    X  X  X XX" //6
+            "X  X X X  X  X  X XX" //7
+            "X  X X X  X  X  X  X" //8
+            "X  X   X  X  X  X XX" //9
+            "    XXX   X  X  X  X" //10
+            "      X      X  XX X" //11
+            "X  X  X      X  X  X" //12
+            "X  X  X         X XX" //13
+            "X  XXXX   X     X  X" //14
+            "X  XXXX   X     XX X" //15
+            "X  X      X     X  X" //16
+            "X  X            X XX" //17
+            "X  XXXXXXXXXXXXXX  X" //18
             "X                  X" //19
             "XXXXXXXXXXXXXXXXXXXX"; //20
 }
