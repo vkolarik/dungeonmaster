@@ -87,24 +87,24 @@ void GameTileCollectionFactory::loadBlueprints() {
     //-----------------3--------------------
     m_blueprints[3] =
             "XXXXXXXXX  XXXXXXXXX" //1
-            "X                  X" //2
-            "X  XXXX            X" //3
-            "X                  X" //4
-            "X                  X" //5
-            "X                  X" //6
-            "X                  X" //7
-            "X                  X" //8
-            "X                  X" //9
-            "X                   " //10
-            "X                   " //11
-            "X                  X" //12
-            "X                  X" //13
-            "X                  X" //14
-            "X                  X" //15
-            "X                  X" //16
-            "X                  X" //17
-            "X                  X" //18
-            "X                  X" //19
+            "X      X   X       X" //2
+            "X  XXXXX   X       X" //3
+            "X      XX  XXX     X" //4
+            "X       X  XX      X" //5
+            "X    X   X  XX     X" //6
+            "X   XX    X   X    X" //7
+            "XXX  X     X  X    X" //8
+            "X   XX      X  X   X" //9
+            "XX   X       X  X   " //10
+            "XXX  X     X    X   " //11
+            "XXXX X    X    X   X" //12
+            "X    X   X    X    X" //13
+            "X  XXX  X    X     X" //14
+            "X  XXX       X     X" //15
+            "X    XXXXXXXXX     X" //16
+            "X X             X  X" //17
+            "X  XXXX    XXXXX   X" //18
+            "X      X           X" //19
             "XXXXXXXXX  XXXXXXXXX"; //20
     //-----------------4--------------------
     m_blueprints[4] =
