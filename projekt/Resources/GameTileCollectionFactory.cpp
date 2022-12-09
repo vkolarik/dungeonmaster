@@ -18,7 +18,7 @@ void GameTileCollectionFactory::loadBlueprints() {
 
     //-----------------0--------------------
     m_blueprints[0] =
-    "XXXXXXXXXXXXXXXXXXXX" //1
+            "XXXXXXXXXXXXXXXXXXXX" //1
             "X                  X" //2
             "X  XXXXXXXX        X" //3
             "X   XXXXXX         X" //4
