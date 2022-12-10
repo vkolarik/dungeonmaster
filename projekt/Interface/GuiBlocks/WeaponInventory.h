@@ -11,7 +11,7 @@
 
 class WeaponInventory : public RenderableBlock {
 private:
-    //TODO vector m_inventroy;
+    //TODO vector m_inventory;
 public:
     WeaponInventory(int x, int y, int width, int height, int id);
     void render(GameState* gameState);
