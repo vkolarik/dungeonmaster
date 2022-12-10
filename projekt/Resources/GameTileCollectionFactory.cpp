@@ -43,46 +43,46 @@ void GameTileCollectionFactory::loadBlueprints() {
     //-----------------1--------------------
     m_blueprints[1] =
             "XXXXXXXXXXXXXXXXXXXX" //1
-            "X                  X" //2
-            "X  XX              X" //3
-            "X                  X" //4
-            "X                  X" //5
-            "X                  X" //6
-            "X                  X" //7
-            "X                  X" //8
-            "X                  X" //9
-            "                    " //10
-            "                    " //11
-            "X                  X" //12
-            "X                  X" //13
-            "X                  X" //14
-            "X                  X" //15
-            "X                  X" //16
-            "X                  X" //17
-            "X                  X" //18
-            "X                  X" //19
+            "X  X            X  X" //2
+            "X  X            X  X" //3
+            "X    XXXXXXXXXX    X" //4
+            "X   X    XX    X   X" //5
+            "X   X    XX    X   X" //6
+            "X   XXX      XXX   X" //7
+            "X   X          X   X" //8
+            "X    XXXXXXXXXX    X" //9
+            "     X        X     " //10
+            "     X        X     " //11
+            "X    XXXXXXXXXX    X" //12
+            "X   X          X   X" //13
+            "X   X          X   X" //14
+            "X   XXX  XX  XXX   X" //15
+            "X   X    XX     X  X" //16
+            "X    XXXXXXXXXX    X" //17
+            "X  X            X  X" //18
+            "X  X            X  X" //19
             "XXXXXXXXX  XXXXXXXXX"; //20
     //-----------------2--------------------
     m_blueprints[2] =
-            "XXXXXXXXXXXXXXXXXXXX" //1
+             "XXXXXXXXXXXXXXXXXXXX" //1
             "X                  X" //2
-            "X XXX              X" //3
-            "X                  X" //4
-            "X                  X" //5
-            "X                  X" //6
-            "X                  X" //7
-            "X                  X" //8
-            "X                  X" //9
-            "                   X" //10
-            "                   X" //11
-            "X                  X" //12
-            "X                  X" //13
-            "X                  X" //14
-            "X                  X" //15
-            "X                  X" //16
-            "X                  X" //17
-            "X                  X" //18
-            "X                  X" //19
+            "X    XXXXXXXX      X" //3
+            "X    X      X  XX  X" //4
+            "X    X      X  X   X" //5
+            "X    X      X  X  XX" //6
+            "X    X      X  X   X" //7
+            "X           X  XX  X" //8
+            "XXXXXXXXXXX X  X  XX" //9
+            "          X X  X   X" //10
+            "          X X  XXX X" //11
+            "XXXXXXXX  X XXXX   X" //12
+            "X      X  X X      X" //13
+            "XX X XXX  X X      X" //14
+            "XX X      X X      X" //15
+            "XX XXXXXXXX X      X" //16
+            "XX X        X      X" //17
+            "X  X  XXXXXXX      X" //18
+            "X     XXXX         X" //19
             "XXXXXXXXX  XXXXXXXXX"; //20
     //-----------------3--------------------
     m_blueprints[3] =
