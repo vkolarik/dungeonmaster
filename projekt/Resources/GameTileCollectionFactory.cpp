@@ -45,11 +45,11 @@ void GameTileCollectionFactory::loadBlueprints() {
             "XXXXXXXXXXXXXXXXXXXX" //1
             "X  X            X  X" //2
             "X  X            X  X" //3
-            "X    XXXXXXXXXX    X" //4
+            "X     XXXXXXXX     X" //4
             "X   X    XX    X   X" //5
             "X   X    XX    X   X" //6
             "X   XXX      XXX   X" //7
-            "X   X          X   X" //8
+            "X                  X" //8
             "X    XXXXXXXXXX    X" //9
             "     X        X     " //10
             "     X        X     " //11
@@ -57,8 +57,8 @@ void GameTileCollectionFactory::loadBlueprints() {
             "X   X          X   X" //13
             "X   X          X   X" //14
             "X   XXX  XX  XXX   X" //15
-            "X   X    XX     X  X" //16
-            "X    XXXXXXXXXX    X" //17
+            "X   X    XX    X   X" //16
+            "X     XXXXXXXX     X" //17
             "X  X            X  X" //18
             "X  X            X  X" //19
             "XXXXXXXXX  XXXXXXXXX"; //20
