@@ -17,4 +17,4 @@ Tento projekt obsahuje jednoduchou hru napsanou v C++, kterou lze snadno zkompil
 ## Ukázka hry
 Níže je screenshot přímo ze hry:
 
-![Screenshot ze hry](https://ctrlv.link/geSU)
+![Screenshot ze hry](https://ctrlv.link/shots/2024/11/27/geSU.png)
